@@ -1,0 +1,29 @@
+body{
+    background-color: #636e72;
+}
+
+header{
+    position: absolute;
+    top: 10%;
+    transform: translatex(-50%);
+    left: 50%;
+}
+.principal{
+    width: 800px;
+    height: 400px;
+    padding: 1%;
+    background-color: aliceblue;
+    border-radius: 5%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translatex(-50%);
+}
+
+#resultado{
+    margin: 3%;
+}
+
+.btn{
+    margin-left: 2%;
+}
