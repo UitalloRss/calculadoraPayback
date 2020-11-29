@@ -3,8 +3,8 @@ var valorMedio = Number(document.querySelector(".result-medio").value);
 var taxa = Number(document.querySelector(".taxa").value);
 
 
-let calcular = document.getElementById("btnCalcular");
-calcular.addEventListener("click", function(e){
+let calculard = document.getElementById("btnCalcular");
+calculard.addEventListener("click", function(e){
     e.preventDefault();
         let cont = 1;
         while(investimento >= 0){
