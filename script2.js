@@ -1,10 +1,13 @@
-var investimento = Number(document.querySelector(".investimento").value);
-var valorMedio = Number(document.querySelector(".result-medio").value);
-var taxa = Number(document.querySelector(".taxa").value);
+const formInvestimento = document.querySelector(".investimento");
+const formValorMedio = document.querySelector(".result-medio");
+const formTaxa = document.querySelector(".taxa");
 
 
-let calculard = document.getElementById("btnCalcular");
-calculard.addEventListener("click", function(e){
+let paybackD = document.getElementById("btCalcular");
+paybackD.addEventListener("click", function(e){
+    var investimento = Number(formInvestimento.value);
+    var valorMedio = Number(formValorMedio.value);
+    var taxa = Number(formTaxa.value);
     e.preventDefault();
         let cont = 1;
         while(investimento >= 0){
@@ -16,13 +19,7 @@ calculard.addEventListener("click", function(e){
         var resultado = document.getElementById("resultado");
         var payback = cont-1;
         resultado.innerHTML = `<p>O período total do retorno do investimento está estimado em ${payback.toFixed(0)} meses.</p>`;
-        console.log(investimento, valorMedio, taxa);
+        console.log(investimento);
+        console.log(valorMedio);
+        console.log(taxa);
 })
-
-function isNumber(valor){
-    if(isNaN(valor)){
-        alert("Não é numero");
-        document.location.reload(true);
-    }
-}
-
