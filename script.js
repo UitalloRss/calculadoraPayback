@@ -9,10 +9,14 @@ calcular.addEventListener("click", function(e){
     }else{
         var investimento = Number(formInvestimento.value);
         var valorMedio = Number(formValorMedio.value);
-        var resultado = document.getElementById("resultado");
-        var payback = investimento/valorMedio;
-        isNumber(payback);
-        resultado.innerHTML = `<p>O período total do retorno do investimento está estimado em ${payback.toFixed(0)} meses.</p>`
+        if(formInvestimento.value <= formValorMedio.value ){
+            alert("O investimento não pode ser menor que o Fluxo de caixa")
+        }else{
+            var resultado = document.getElementById("resultado");
+            var payback = investimento/valorMedio;
+            isNumber(payback);
+            resultado.innerHTML = `<p>O período total do retorno do investimento está estimado em ${payback.toFixed(0)} meses.</p>`
+        }
     }
 
     function isNumber(valor){
