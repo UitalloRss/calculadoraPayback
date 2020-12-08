@@ -10,7 +10,9 @@ paybackD.addEventListener("click", function(e){
     var investimento = Number(formInvestimento.value);
     var valorMedio = Number(formValorMedio.value);
     var taxa = Number(formTaxa);
-    if(investimento <= valorMedio ){
+    console.log(investimento)
+    console.log(valorMedio)
+    if(valorMedio >= investimento ){
         alert("O investimento não pode ser menor que o Fluxo de caixa")
     }else{
         let cont = 1;

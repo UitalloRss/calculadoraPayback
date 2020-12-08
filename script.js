@@ -9,7 +9,7 @@ calcular.addEventListener("click", function(e){
     }else{
         var investimento = Number(formInvestimento.value);
         var valorMedio = Number(formValorMedio.value);
-        if(formInvestimento.value <= formValorMedio.value ){
+        if(investimento <= valorMedio ){
             alert("O investimento não pode ser menor que o Fluxo de caixa")
         }else{
             var resultado = document.getElementById("resultado");
